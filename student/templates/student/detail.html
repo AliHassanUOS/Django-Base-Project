@@ -1,0 +1,35 @@
+{% extends 'student/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+.tb{
+
+    background-color:whitesmoke;
+
+}
+
+</style>
+
+<div class="container">
+<h2>Detail Page :</h2>
+
+
+<form action="" method="POST" enctype="multipart/form-data" class="tb">
+    {% csrf_token %}
+    
+
+    <table class="a">
+
+        {{obj.as_p}}
+
+        {{form.non}}
+    </table>
+
+<button type="submit">sub</button>
+
+</form>
+</div>
+
+{% endblock content %}

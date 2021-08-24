@@ -1,0 +1,49 @@
+{% extends "student/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<style>
+
+.table{
+
+  background-color: wheat;
+}
+
+</style>
+
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Number</th>
+        <th scope="col">Password</th>
+        <th scope="col">Confirm Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for element in res  %}
+
+      <tr>
+        <th scope="row">{{element.id}}</th>
+        <td>{{element.name}}</td>
+        <td>{{element.email}}</td>
+        <td>{{element.number}}</td>
+        <td>{{element.password}}</td>
+        <td>{{element.password1}}</td>
+      </tr>
+
+      {% endfor %}  
+    </tbody>
+  </table>
+
+  <!-- <a href="{% url 'update' myid %}"></a> -->
+ 
+</div>
+
+{% endblock content %}
